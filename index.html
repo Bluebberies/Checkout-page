@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chechout page challenge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="Images/devchallenges.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/0c4d6ce46a.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Checkout</h1>
+        </header>
+        <div class="wrapper">
+            <section>
+                <form name="myForm"  onsubmit="return validateForm()" >
+                    <div>
+                        <h3 class="sub-title">Contact infomation</h3>
+                        <label for="email">E-mail</label><br>
+                        <input type="email" id="email" placeholder="  &#9993;  Enter your email..."style="font-family:Arial, FontAwesome" required><br>
+                        <div style="margin-top: 15px;">
+                            <label for="phone">Phone</label><br>
+                            <input type="tel" id="phone" placeholder="  &#128222;  Enter your phone..."style="font-family:Arial, FontAwesome" required>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="sub-title"  style="margin-top: 40px;">Shipping address</h3>
+                        <label for="fullname">Full Name</label><br>
+                        <input type="text" name="fname" id="fullname" placeholder="  &#xf2be;  Rodney Cotton"style="font-family:Arial, FontAwesome" required><br>
+                        <div style="margin-top: 15px;">
+                            <label for="address">Address</label><br>
+                            <input type="text" id="address" placeholder="  🏠  Your address.."style="font-family:Arial, FontAwesome"  required><br>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <label for="city">City</label><br>
+                            <input type="text" name="fname" id="city" placeholder="  🏙️  Your city.."style="font-family:Arial, FontAwesome"  required><br>
+                        </div>
+                        <div class="inn-input" style="margin-top: 15px;">
+                            <div class="inn-input1">
+                                <label for="country">Country</label><br>
+                                <input type="" id="country" list="countryname" placeholder="  🌎  Your country.."style="font-family:Arial, FontAwesome"  required>
+                                <datalist id="countryname">
+                                    <option value="Nigeria">
+                                    <option value="England">
+                                    <option value="Cambridge">
+                                    <option value="Canada">
+                                    <option value="Ghana">
+                                </datalist><br>
+                            </div>
+                            <div class="inn-input2">
+                                <label for="postal">Postal code</label><br>
+                                <input type="text" id="postal" placeholder="  📁  Your postal code.."style="font-family:Arial, FontAwesome"  required><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-top: 15px;">
+                        <input type="checkbox" id="save">
+                        <label for="save">Save this information for next time</label>
+                    </div>
+                    <input type="submit" value="Continue">
+                </form>
+            </section>
+            <aside>
+                <div class="cover">
+                    <div class="aside-grid" style="margin-left: 10px;">
+                        <div class="image">
+                            <img src="images/photo1.png" alt="">
+                        </div>
+                        <div class="inner-aside">
+                            <div class="inner-design">
+                                <p>Vintage Backbag<br>
+                                    <span class="coloured">$54.99</span>
+                                    <span class="coloured2">   $94.99</span>
+                                </p>
+                            </div>
+                            <div class="myButton">
+                                <button onclick="increment()">+</button>
+                                <input type="number" min="1" max="10" id="num1">
+                                <button onclick="decrement()">-</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="aside-grid">
+                        <div class="image" >
+                            <img src="images/photo2.png" alt="">
+                        </div>
+                        <div class="inner-aside">
+                            <div class="inner-design">
+                                <p>Levi Shoes<br>
+                                    <span class="coloured">$74.99</span>
+                                    <span class="coloured2">$124.99</span>
+                                </p>
+                            </div>
+                            <div class="myButton">
+                                <button onclick="increase()">+</button>
+                                <input type="number" min="1" max="10" id="num2">
+                                <button onclick="decrease()">-</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="last-aside">
+                            <p class="side1">Shipping</p>
+                            <p class="side2">$19</p>
+                        </div>
+                        <div class="last-aside">
+                            <p class="side1">Total</p>
+                            <p class="side2">$148.98</p>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+        <footer>
+            <p>created by <span style="font-weight: bolder;">Bluebberies</span> - devChallenges.io</p>
+        </footer>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
